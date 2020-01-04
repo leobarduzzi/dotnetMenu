@@ -7,16 +7,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Menu.Data;
 using Menu.Models;
+using Menu.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Menu.Controllers
 {
     [Authorize]
-    [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        
+
 
         public ProductController(ApplicationDbContext context)
         {
@@ -24,10 +26,24 @@ namespace Menu.Controllers
         }
 
         // GET: api/Product
+        [Route("api/v1/Products")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Products>>> GetProducts()
+        public async Task<ActionResult<ResultViewModel>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            if(!User.Identity.IsAuthenticated)
+            {
+                return Unauthorized( new ResultViewModel{
+                    Success = false,
+                    Message = "Usuário não autenticado"
+                });
+            }
+            
+            return new ResultViewModel{
+                Success = true,
+                Message = "",
+                Data = await _context.Products.AsNoTracking().ToListAsync(),
+            };            
+            
         }
 
         // GET: api/Product/5
@@ -79,6 +95,7 @@ namespace Menu.Controllers
         // POST: api/Product
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
+        [Route("v1/Product")]
         [HttpPost]
         public async Task<ActionResult<Products>> PostProducts(Products products)
         {
