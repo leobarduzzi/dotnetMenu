@@ -20521,6 +20521,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Felipe\\Desktop\\Projects\\Menu\\Models\\Painel\\Index.cshtml",
+      "TargetPath": "Models\\Painel\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Felipe\\Desktop\\Projects\\Menu\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

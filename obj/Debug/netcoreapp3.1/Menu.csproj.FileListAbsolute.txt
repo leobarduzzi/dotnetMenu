@@ -158,3 +158,4 @@ C:\Users\Felipe\Desktop\Projects\Menu\bin\Debug\netcoreapp3.1\runtimes\win-x86\n
 C:\Users\Felipe\Desktop\Projects\Menu\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Felipe\Desktop\Projects\Menu\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Felipe\Desktop\Projects\Menu\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+c:\Users\Felipe\Desktop\Projects\Menu\obj\Debug\netcoreapp3.1\Razor\Views\Painel\Index.cshtml.g.cs

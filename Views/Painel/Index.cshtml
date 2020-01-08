@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Painel";
+}
+<div id="app">
+    <h3>Lista de produtos</h3>
+    <button class="btn btn-link">Adicionar Produto</button>
+    <table class="table table-bordered"  v-if="products.length > 0">
+        <th><td>ok</td></th>
+    </table>
+    <p v-else>
+        Ainda não temos nenhum produto.
+    </p>
+</div>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/painel/Index.vue.js" ></script>
+}
